@@ -476,7 +476,8 @@ function openSite(){
 
     let pass = document.getElementById("password").value;
 
-    let correctPassword = "Happy18";
+    // الباسوورد
+    let correctPassword = "24/5/2008";
 
     if(pass === correctPassword){
 
@@ -484,9 +485,22 @@ function openSite(){
 
         startTyping();
 
+        // تشغيل الموسيقى تلقائي بعد الدخول
+        document.getElementById("music").play();
+
     }else{
 
-        alert("❌ الباسوورد غلط");
+        document.getElementById("error").innerHTML =
+        "❌ الباسوورد غلط";
+
+        document.getElementById("error").style.color =
+        "white";
+
+        document.getElementById("error").style.marginTop =
+        "15px";
+
+        document.getElementById("password").style.border =
+        "2px solid red";
     }
 }
 /* ========================= */
