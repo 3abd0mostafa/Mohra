@@ -116,6 +116,13 @@ body{
     cursor:pointer;
 }
 
+#error{
+
+    margin-top:10px;
+    color:white;
+    font-size:18px;
+}
+
 /* ========================= */
 /* الناف بار */
 /* ========================= */
@@ -363,9 +370,12 @@ canvas{
 
 <div id="login">
 
-    <h2>💖 ادخلي الاسم 💖</h2>
+    <h2>💖 ادخلي الباسوورد 💖</h2>
 
-    <input type="text" placeholder="اكتب الاسم">
+    <input 
+    type="password"
+    id="password"
+    placeholder="اكتب الباسوورد">
 
     <button onclick="openSite()">
 
@@ -373,13 +383,15 @@ canvas{
 
     </button>
 
+    <p id="error"></p>
+
 </div>
 
 <!-- الموسيقى -->
 
 <audio id="music" loop>
 
-    <source src="music.mpeg" type="audio/mpeg">
+    <source src="music.mp3" type="audio/mpeg">
 
 </audio>
 
@@ -458,7 +470,12 @@ canvas{
 
         <p>
 
-كل سنة وانتي طيبة ياروحي و عقبال سنين كتيره و احنا مع بعض و تحققي كل الي نفسك فيه و اشوفك من اشطر الناس و كل سنة وانتي طيبه و قلبك ابيض و كله بيحبك❤️❤️❤️❤️❤️
+كل سنة وانتي طيبة ياروحي ❤️  
+وعقبال سنين كتيره واحنا مع بعض  
+وتحققي كل اللي نفسك فيه  
+واشوفك من أنجح الناس ❤️  
+وكل سنة وانتي طيبة وقلبك أبيض  
+وكل الناس بتحبك 💖
 
         </p>
 
@@ -469,14 +486,31 @@ canvas{
 <script>
 
 /* ========================= */
-/* فتح الموقع */
+/* فتح الموقع بالباسوورد */
 /* ========================= */
 
 function openSite(){
 
-    document.getElementById("login").style.display = "none";
+    let pass = document.getElementById("password").value;
 
-    startTyping();
+    let correctPassword = "24/5/2008";
+
+    if(pass === correctPassword){
+
+        document.getElementById("login").style.display = "none";
+
+        startTyping();
+
+        document.getElementById("music").play();
+
+    }else{
+
+        document.getElementById("error").innerHTML =
+        "❌ الباسوورد غلط";
+
+        document.getElementById("password").style.border =
+        "2px solid red";
+    }
 }
 
 /* ========================= */
