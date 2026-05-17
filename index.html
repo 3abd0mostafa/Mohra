@@ -18,20 +18,20 @@ href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10
 /* ========================= */
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
 
-    font-family:Arial;
-    overflow-x:hidden;
-    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
-    color:white;
-    text-align:center;
-    min-height:100vh;
-    position:relative;
+    font-family:Arial;
+    overflow-x:hidden;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    color:white;
+    text-align:center;
+    min-height:100vh;
+    position:relative;
 }
 
 /* ========================= */
@@ -40,24 +40,24 @@ body{
 
 .heart{
 
-    position:fixed;
-    bottom:-50px;
-    animation:floatUp linear forwards;
-    pointer-events:none;
-    z-index:1;
+    position:fixed;
+    bottom:-50px;
+    animation:floatUp linear forwards;
+    pointer-events:none;
+    z-index:1;
 }
 
 @keyframes floatUp{
 
-    0%{
-        transform:translateY(0) rotate(0deg);
-        opacity:1;
-    }
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
 
-    100%{
-        transform:translateY(-120vh) rotate(360deg);
-        opacity:0;
-    }
+    100%{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+    }
 }
 
 /* ========================= */
@@ -66,60 +66,60 @@ body{
 
 #login{
 
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.90);
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.90);
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
 
-    z-index:9999;
-    padding:20px;
+    z-index:9999;
+    padding:20px;
 }
 
 #login h2{
 
-    margin-bottom:20px;
-    font-size:28px;
+    margin-bottom:20px;
+    font-size:28px;
 }
 
 #login input{
 
-    width:100%;
-    max-width:300px;
+    width:100%;
+    max-width:300px;
 
-    padding:14px;
+    padding:14px;
 
-    border:none;
-    border-radius:15px;
+    border:none;
+    border-radius:15px;
 
-    margin-bottom:15px;
+    margin-bottom:15px;
 
-    font-size:18px;
-    text-align:center;
+    font-size:18px;
+    text-align:center;
 }
 
 #login button{
 
-    padding:14px 25px;
+    padding:14px 25px;
 
-    border:none;
-    border-radius:15px;
+    border:none;
+    border-radius:15px;
 
-    background:white;
+    background:white;
 
-    font-size:18px;
+    font-size:18px;
 
-    cursor:pointer;
+    cursor:pointer;
 }
 
 #error{
 
-    margin-top:10px;
-    color:white;
-    font-size:18px;
+    margin-top:10px;
+    color:white;
+    font-size:18px;
 }
 
 /* ========================= */
@@ -128,30 +128,30 @@ body{
 
 nav{
 
-    width:100%;
-    padding:15px;
+    width:100%;
+    padding:15px;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(10px);
 
-    z-index:10;
+    z-index:10;
 }
 
 nav button{
 
-    border:none;
-    border-radius:15px;
+    border:none;
+    border-radius:15px;
 
-    padding:12px 18px;
+    padding:12px 18px;
 
-    font-size:16px;
+    font-size:16px;
 
-    cursor:pointer;
+    cursor:pointer;
 }
 
 /* ========================= */
@@ -160,11 +160,11 @@ nav button{
 
 section{
 
-    display:none;
+    display:none;
 
-    min-height:100vh;
+    min-height:100vh;
 
-    padding:30px 15px;
+    padding:30px 15px;
 }
 
 /* ========================= */
@@ -173,19 +173,19 @@ section{
 
 h1{
 
-    margin-top:30px;
+    margin-top:30px;
 
-    font-size:40px;
-    line-height:1.5;
+    font-size:40px;
+    line-height:1.5;
 }
 
 #typing{
 
-    margin-top:20px;
+    margin-top:20px;
 
-    font-size:22px;
+    font-size:22px;
 
-    min-height:60px;
+    min-height:60px;
 }
 
 /* ========================= */
@@ -194,11 +194,11 @@ h1{
 
 .cake{
 
-    font-size:90px;
+    font-size:90px;
 
-    margin-top:30px;
+    margin-top:30px;
 
-    position:relative;
+    position:relative;
 }
 
 /* ========================= */
@@ -207,36 +207,36 @@ h1{
 
 .flame{
 
-    width:15px;
-    height:30px;
+    width:15px;
+    height:30px;
 
-    background:orange;
+    background:orange;
 
-    border-radius:50%;
+    border-radius:50%;
 
-    position:absolute;
+    position:absolute;
 
-    top:-20px;
-    left:50%;
+    top:-20px;
+    left:50%;
 
-    transform:translateX(-50%);
+    transform:translateX(-50%);
 
-    animation:flicker .2s infinite;
+    animation:flicker .2s infinite;
 }
 
 @keyframes flicker{
 
-    0%{
-        transform:translateX(-50%) scale(1);
-    }
+    0%{
+        transform:translateX(-50%) scale(1);
+    }
 
-    50%{
-        transform:translateX(-50%) scale(1.3);
-    }
+    50%{
+        transform:translateX(-50%) scale(1.3);
+    }
 
-    100%{
-        transform:translateX(-50%) scale(1);
-    }
+    100%{
+        transform:translateX(-50%) scale(1);
+    }
 }
 
 /* ========================= */
@@ -245,16 +245,16 @@ h1{
 
 .surprise-btn{
 
-    margin-top:30px;
+    margin-top:30px;
 
-    border:none;
-    border-radius:20px;
+    border:none;
+    border-radius:20px;
 
-    padding:15px 25px;
+    padding:15px 25px;
 
-    font-size:18px;
+    font-size:18px;
 
-    cursor:pointer;
+    cursor:pointer;
 }
 
 /* ========================= */
@@ -263,11 +263,11 @@ h1{
 
 #surpriseText{
 
-    margin-top:25px;
+    margin-top:25px;
 
-    font-size:24px;
+    font-size:24px;
 
-    line-height:1.7;
+    line-height:1.7;
 }
 
 /* ========================= */
@@ -276,43 +276,43 @@ h1{
 
 .message-box{
 
-    width:100%;
-    max-width:500px;
+    width:100%;
+    max-width:500px;
 
-    margin:auto;
+    margin:auto;
 
-    background:rgba(255,255,255,.2);
+    background:rgba(255,255,255,.2);
 
-    padding:25px;
+    padding:25px;
 
-    border-radius:25px;
+    border-radius:25px;
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(10px);
 }
 
 .message-box h2{
 
-    margin-bottom:20px;
+    margin-bottom:20px;
 
-    font-size:30px;
+    font-size:30px;
 }
 
 .message-box img{
 
-    width:100%;
+    width:100%;
 
-    max-width:280px;
+    max-width:280px;
 
-    border-radius:20px;
+    border-radius:20px;
 
-    margin-bottom:20px;
+    margin-bottom:20px;
 }
 
 .message-box p{
 
-    font-size:20px;
+    font-size:20px;
 
-    line-height:1.8;
+    line-height:1.8;
 }
 
 /* ========================= */
@@ -321,11 +321,11 @@ h1{
 
 canvas{
 
-    position:fixed;
+    position:fixed;
 
-    inset:0;
+    inset:0;
 
-    z-index:-1;
+    z-index:-1;
 }
 
 /* ========================= */
@@ -334,21 +334,21 @@ canvas{
 
 @media(max-width:600px){
 
-    h1{
-        font-size:32px;
-    }
+    h1{
+        font-size:32px;
+    }
 
-    #typing{
-        font-size:20px;
-    }
+    #typing{
+        font-size:20px;
+    }
 
-    .cake{
-        font-size:70px;
-    }
+    .cake{
+        font-size:70px;
+    }
 
-    .message-box p{
-        font-size:18px;
-    }
+    .message-box p{
+        font-size:18px;
+    }
 }
 
 </style>
@@ -361,20 +361,20 @@ canvas{
 
 <div id="login">
 
-    <h2>💖 ادخلي الباسوورد 💖</h2>
+    <h2>💖 ادخلي الباسوورد 💖</h2>
 
-    <input 
-    type="password"
-    id="password"
-    placeholder="اكتب الباسوورد">
+    <input 
+    type="password"
+    id="password"
+    placeholder="اكتب الباسوورد">
 
-    <button onclick="openSite()">
+    <button onclick="openSite()">
 
-        دخول 🎉
+        دخول 🎉
 
-    </button>
+    </button>
 
-    <p id="error"></p>
+    <p id="error"></p>
 
 </div>
 
@@ -382,8 +382,7 @@ canvas{
 
 <audio id="music" loop>
 
-    <source src="music1.mp3" type="audio/mpeg">
-
+<source src="music1.mp3" type="audio/mpeg">
 </audio>
 
 <!-- الكونفيتي -->
@@ -394,23 +393,23 @@ canvas{
 
 <nav>
 
-    <button onclick="showPage('home')">
+    <button onclick="showPage('home')">
 
-        🎉 الرئيسية
+        🎉 الرئيسية
 
-    </button>
+    </button>
 
-    <button onclick="showPage('message')">
+    <button onclick="showPage('message')">
 
-        💌 رسالة
+        💌 رسالة
 
-    </button>
+    </button>
 
-    <button onclick="playMusic()">
+    <button onclick="playMusic()">
 
-        🎵 موسيقى
+        🎵 موسيقى
 
-    </button>
+    </button>
 
 </nav>
 
@@ -418,30 +417,30 @@ canvas{
 
 <section id="home">
 
-    <h1>
+    <h1>
 
-        🎂 Happy Birthday 🎂
+        🎂 Happy Birthday 🎂
 
-    </h1>
+    </h1>
 
-    <h2 id="typing"></h2>
+    <h2 id="typing"></h2>
 
-    <div class="cake">
+    <div class="cake">
 
-        🎂
+        🎂
 
-        <div class="flame"></div>
+        <div class="flame"></div>
 
-    </div>
+    </div>
 
-    <button class="surprise-btn"
-    onclick="surprise()">
+    <button class="surprise-btn"
+    onclick="surprise()">
 
-        🎁 اضغطي للمفاجأة
+        🎁 اضغطي للمفاجأة
 
-    </button>
+    </button>
 
-    <h2 id="surpriseText"></h2>
+    <h2 id="surpriseText"></h2>
 
 </section>
 
@@ -449,22 +448,22 @@ canvas{
 
 <section id="message">
 
-    <div class="message-box">
+    <div class="message-box">
 
-        <h2>
+        <h2>
 
-            💌 رسالة خاصة 💌
+            💌 رسالة خاصة 💌
 
-        </h2>
+        </h2>
 
-        <img src="Gemini_Generated_Image_il3dreil3dreil3d.png">
+        <img src="Gemini_Generated_Image_il3dreil3dreil3d.png">
 
-        <p>
+        <p>
 كل سنة وانتي طيبة ياروحي و عقبال سنين كتيره و احنا مع بعض و تحققي كل الي نفسك فيه و اشوفك من اشطر الناس و كل سنة وانتي طيبه و قلبك ابيض و كله بيحبك❤️❤️❤️❤️❤️
 
-        </p>
+        </p>
 
-    </div>
+    </div>
 
 </section>
 
@@ -476,28 +475,28 @@ canvas{
 
 function openSite(){
 
-    let pass = document.getElementById("password").value;
+    let pass = document.getElementById("password").value;
 
-    let correctPassword = "24/5/2008";
+    let correctPassword = "24/5/2008";
 
-    if(pass === correctPassword){
+    if(pass === correctPassword){
 
-        document.getElementById("login").style.display = "none";
+        document.getElementById("login").style.display = "none";
 
-        document.getElementById("home").style.display = "block";
+        document.getElementById("home").style.display = "block";
 
-        startTyping();
+        startTyping();
 
-        document.getElementById("music").play();
+        document.getElementById("music").play();
 
-    }else{
+    }else{
 
-        document.getElementById("error").innerHTML =
-        "❌ الباسوورد غلط";
+        document.getElementById("error").innerHTML =
+        "❌ الباسوورد غلط";
 
-        document.getElementById("password").style.border =
-        "2px solid red";
-    }
+        document.getElementById("password").style.border =
+        "2px solid red";
+    }
 }
 
 /* ========================= */
@@ -506,11 +505,11 @@ function openSite(){
 
 function showPage(pageId){
 
-    document.getElementById("home").style.display = "none";
+    document.getElementById("home").style.display = "none";
 
-    document.getElementById("message").style.display = "none";
+    document.getElementById("message").style.display = "none";
 
-    document.getElementById(pageId).style.display = "block";
+    document.getElementById(pageId).style.display = "block";
 }
 
 /* ========================= */
@@ -519,7 +518,7 @@ function showPage(pageId){
 
 function playMusic(){
 
-    document.getElementById("music").play();
+    document.getElementById("music").play();
 }
 
 /* ========================= */
@@ -528,9 +527,9 @@ function playMusic(){
 
 function surprise(){
 
-    document.getElementById("surpriseText").innerHTML =
+    document.getElementById("surpriseText").innerHTML =
 
-    "💖 كل سنة وانتي أجمل حاجة في حياتي 💖";
+    "💖 كل سنة وانتي أجمل حاجة في حياتي 💖";
 }
 
 /* ========================= */
@@ -543,20 +542,20 @@ let i = 0;
 
 function startTyping(){
 
-    let speed = setInterval(function(){
+    let speed = setInterval(function(){
 
-        if(i < text.length){
+        if(i < text.length){
 
-            document.getElementById("typing").innerHTML += text.charAt(i);
+            document.getElementById("typing").innerHTML += text.charAt(i);
 
-            i++;
+            i++;
 
-        }else{
+        }else{
 
-            clearInterval(speed);
-        }
+            clearInterval(speed);
+        }
 
-    },100);
+    },100);
 }
 
 /* ========================= */
@@ -565,29 +564,29 @@ function startTyping(){
 
 function createHeart(){
 
-    const heart = document.createElement("div");
+    const heart = document.createElement("div");
 
-    heart.classList.add("heart");
+    heart.classList.add("heart");
 
-    heart.innerHTML = "💖";
+    heart.innerHTML = "💖";
 
-    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.left = Math.random() * 100 + "vw";
 
-    let size = Math.random() * 25 + 20;
+    let size = Math.random() * 25 + 20;
 
-    heart.style.fontSize = size + "px";
+    heart.style.fontSize = size + "px";
 
-    heart.style.animationDuration =
+    heart.style.animationDuration =
 
-    (Math.random() * 3 + 3) + "s";
+    (Math.random() * 3 + 3) + "s";
 
-    document.body.appendChild(heart);
+    document.body.appendChild(heart);
 
-    setTimeout(() => {
+    setTimeout(() => {
 
-        heart.remove();
+        heart.remove();
 
-    },6000);
+    },6000);
 }
 
 setInterval(createHeart,250);
@@ -608,51 +607,51 @@ let pieces = [];
 
 for(let i=0;i<120;i++){
 
-    pieces.push({
+    pieces.push({
 
-        x:Math.random()*canvas.width,
+        x:Math.random()*canvas.width,
 
-        y:Math.random()*canvas.height,
+        y:Math.random()*canvas.height,
 
-        r:Math.random()*6+2
-    });
+        r:Math.random()*6+2
+    });
 }
 
 function drawConfetti(){
 
-    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.clearRect(0,0,canvas.width,canvas.height);
 
-    ctx.fillStyle = "white";
+    ctx.fillStyle = "white";
 
-    pieces.forEach(function(p){
+    pieces.forEach(function(p){
 
-        ctx.beginPath();
+        ctx.beginPath();
 
-        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
 
-        ctx.fill();
+        ctx.fill();
 
-        p.y += 2;
+        p.y += 2;
 
-        if(p.y > canvas.height){
+        if(p.y > canvas.height){
 
-            p.y = 0;
-        }
-    });
+            p.y = 0;
+        }
+    });
 
-    requestAnimationFrame(drawConfetti);
+    requestAnimationFrame(drawConfetti);
 }
 
 drawConfetti();
 
 window.addEventListener("resize",()=>{
 
-    canvas.width = window.innerWidth;
+    canvas.width = window.innerWidth;
 
-    canvas.height = window.innerHeight;
+    canvas.height = window.innerHeight;
 });
 
 </script>
 
 </body>
-</html>
+</html>     ليه الاغنيه مش شغاله 
