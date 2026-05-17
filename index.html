@@ -2,422 +2,663 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎉 Happy Birthday 🎉</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
 
-    <style>
-        /* ========================= */
-        /* إعدادات عامة */
-        /* ========================= */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: Arial, sans-serif;
-            overflow-x: hidden;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-            color: white;
-            text-align: center;
-            min-height: 100vh;
-            position: relative;
-        }
+<title>🎉 Happy Birthday 🎉</title>
 
-        /* ========================= */
-        /* القلوب */
-        /* ========================= */
-        .heart {
-            position: fixed;
-            bottom: -50px;
-            animation: floatUp linear forwards;
-            pointer-events: none;
-            z-index: 1;
-        }
+<link rel="icon"
+href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
 
-        @keyframes floatUp {
-            0% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-120vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
+<style>
 
-        /* ========================= */
-        /* صفحة الدخول */
-        /* ========================= */
-        #login {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, .90);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            z-index: 9999;
-            padding: 20px;
-        }
+/* ========================= */
+/* إعدادات عامة */
+/* ========================= */
 
-        #login h2 {
-            margin-bottom: 20px;
-            font-size: 28px;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        #login input {
-            width: 100%;
-            max-width: 300px;
-            padding: 14px;
-            border: none;
-            border-radius: 15px;
-            margin-bottom: 15px;
-            font-size: 18px;
-            text-align: center;
-        }
+body{
 
-        #login button {
-            padding: 14px 25px;
-            border: none;
-            border-radius: 15px;
-            background: white;
-            font-size: 18px;
-            cursor: pointer;
-        }
+    font-family:Arial;
+    overflow-x:hidden;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    color:white;
+    text-align:center;
+    min-height:100vh;
+    position:relative;
+}
 
-        #error {
-            margin-top: 10px;
-            color: #ff4d4d;
-            font-size: 18px;
-            font-weight: bold;
-        }
+/* ========================= */
+/* القلوب */
+/* ========================= */
 
-        /* ========================= */
-        /* الناف بار */
-        /* ========================= */
-        nav {
-            width: 100%;
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            backdrop-filter: blur(10px);
-            z-index: 10;
-        }
+.heart{
 
-        nav button {
-            border: none;
-            border-radius: 15px;
-            padding: 12px 18px;
-            font-size: 16px;
-            cursor: pointer;
-        }
+    position:fixed;
+    bottom:-50px;
+    animation:floatUp linear forwards;
+    pointer-events:none;
+    z-index:1;
+}
 
-        /* ========================= */
-        /* الصفحات */
-        /* ========================= */
-        section {
-            display: none;
-            min-height: 100vh;
-            padding: 30px 15px;
-        }
+@keyframes floatUp{
 
-        /* ========================= */
-        /* العنوان */
-        /* ========================= */
-        h1 {
-            margin-top: 30px;
-            font-size: 40px;
-            line-height: 1.5;
-        }
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
 
-        #typing {
-            margin-top: 20px;
-            font-size: 22px;
-            min-height: 60px;
-        }
+    100%{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+    }
+}
 
-        /* ========================= */
-        /* الكيكة */
-        /* ========================= */
-        .cake {
-            font-size: 90px;
-            margin-top: 30px;
-            position: relative;
-        }
+/* ========================= */
+/* صفحة الدخول */
+/* ========================= */
 
-        /* ========================= */
-        /* الشمعة */
-        /* ========================= */
-        .flame {
-            width: 15px;
-            height: 30px;
-            background: orange;
-            border-radius: 50%;
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: flicker .2s infinite;
-        }
+#login{
 
-        @keyframes flicker {
-            0% { transform: translateX(-50%) scale(1); }
-            50% { transform: translateX(-50%) scale(1.3); }
-            100% { transform: translateX(-50%) scale(1); }
-        }
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.90);
 
-        /* ========================= */
-        /* زر المفاجأة */
-        /* ========================= */
-        .surprise-btn {
-            margin-top: 30px;
-            border: none;
-            border-radius: 20px;
-            padding: 15px 25px;
-            font-size: 18px;
-            cursor: pointer;
-        }
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
 
-        /* ========================= */
-        /* رسالة المفاجأة */
-        /* ========================= */
-        #surpriseText {
-            margin-top: 25px;
-            font-size: 24px;
-            line-height: 1.7;
-        }
+    z-index:9999;
+    padding:20px;
+}
 
-        /* ========================= */
-        /* صفحة الرسالة */
-        /* ========================= */
-        .message-box {
-            width: 100%;
-            max-width: 500px;
-            margin: auto;
-            background: rgba(255, 255, 255, .2);
-            padding: 25px;
-            border-radius: 25px;
-            backdrop-filter: blur(10px);
-        }
+#login h2{
 
-        .message-box h2 {
-            margin-bottom: 20px;
-            font-size: 30px;
-        }
+    margin-bottom:20px;
+    font-size:28px;
+}
 
-        .message-box img {
-            width: 100%;
-            max-width: 280px;
-            border-radius: 20px;
-            margin-bottom: 20px;
-        }
+#login input{
 
-        .message-box p {
-            font-size: 20px;
-            line-height: 1.8;
-        }
+    width:100%;
+    max-width:300px;
 
-        /* ========================= */
-        /* الكونفيتي */
-        /* ========================= */
-        canvas {
-            position: fixed;
-            inset: 0;
-            z-index: -1;
-        }
+    padding:14px;
 
-        /* ========================= */
-        /* Responsive */
-        /* ========================= */
-        @media(max-width:600px) {
-            h1 { font-size: 32px; }
-            #typing { font-size: 20px; }
-            .cake { font-size: 70px; }
-            .message-box p { font-size: 18px; }
-        }
-    </style>
+    border:none;
+    border-radius:15px;
+
+    margin-bottom:15px;
+
+    font-size:18px;
+    text-align:center;
+}
+
+#login button{
+
+    padding:14px 25px;
+
+    border:none;
+    border-radius:15px;
+
+    background:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+}
+
+#error{
+
+    margin-top:10px;
+    color:white;
+    font-size:18px;
+}
+
+/* ========================= */
+/* الناف بار */
+/* ========================= */
+
+nav{
+
+    width:100%;
+    padding:15px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+
+    backdrop-filter:blur(10px);
+
+    z-index:10;
+}
+
+nav button{
+
+    border:none;
+    border-radius:15px;
+
+    padding:12px 18px;
+
+    font-size:16px;
+
+    cursor:pointer;
+}
+
+/* ========================= */
+/* الصفحات */
+/* ========================= */
+
+section{
+
+    display:none;
+
+    min-height:100vh;
+
+    padding:30px 15px;
+}
+
+/* ========================= */
+/* العنوان */
+/* ========================= */
+
+h1{
+
+    margin-top:30px;
+
+    font-size:40px;
+    line-height:1.5;
+}
+
+#typing{
+
+    margin-top:20px;
+
+    font-size:22px;
+
+    min-height:60px;
+}
+
+/* ========================= */
+/* الكيكة */
+/* ========================= */
+
+.cake{
+
+    font-size:90px;
+
+    margin-top:30px;
+
+    position:relative;
+}
+
+/* ========================= */
+/* الشمعة */
+/* ========================= */
+
+.flame{
+
+    width:15px;
+    height:30px;
+
+    background:orange;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    top:-20px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    animation:flicker .2s infinite;
+}
+
+@keyframes flicker{
+
+    0%{
+        transform:translateX(-50%) scale(1);
+    }
+
+    50%{
+        transform:translateX(-50%) scale(1.3);
+    }
+
+    100%{
+        transform:translateX(-50%) scale(1);
+    }
+}
+
+/* ========================= */
+/* زر المفاجأة */
+/* ========================= */
+
+.surprise-btn{
+
+    margin-top:30px;
+
+    border:none;
+    border-radius:20px;
+
+    padding:15px 25px;
+
+    font-size:18px;
+
+    cursor:pointer;
+}
+
+/* ========================= */
+/* رسالة المفاجأة */
+/* ========================= */
+
+#surpriseText{
+
+    margin-top:25px;
+
+    font-size:24px;
+
+    line-height:1.7;
+}
+
+/* ========================= */
+/* صفحة الرسالة */
+/* ========================= */
+
+.message-box{
+
+    width:100%;
+    max-width:500px;
+
+    margin:auto;
+
+    background:rgba(255,255,255,.2);
+
+    padding:25px;
+
+    border-radius:25px;
+
+    backdrop-filter:blur(10px);
+}
+
+.message-box h2{
+
+    margin-bottom:20px;
+
+    font-size:30px;
+}
+
+.message-box img{
+
+    width:100%;
+
+    max-width:280px;
+
+    border-radius:20px;
+
+    margin-bottom:20px;
+}
+
+.message-box p{
+
+    font-size:20px;
+
+    line-height:1.8;
+}
+
+/* ========================= */
+/* الكونفيتي */
+/* ========================= */
+
+canvas{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-1;
+}
+
+/* ========================= */
+/* Responsive */
+/* ========================= */
+
+@media(max-width:600px){
+
+    h1{
+        font-size:32px;
+    }
+
+    #typing{
+        font-size:20px;
+    }
+
+    .cake{
+        font-size:70px;
+    }
+
+    .message-box p{
+        font-size:18px;
+    }
+}
+
+</style>
+
 </head>
 
 <body>
 
-    <div id="login">
-        <h2>💖 ادخلي الباسوورد 💖</h2>
-        <input type="password" id="password" placeholder="اكتب الباسوورد">
-        <button onclick="openSite()">دخول 🎉</button>
-        <p id="error"></p>
-    </div>
-<audio id="music" loop controls>
-    <source src="music.mp3" type="audio/mpeg">
+<!-- صفحة الدخول -->
+
+<div id="login">
+
+    <h2>💖 ادخلي الباسوورد 💖</h2>
+
+    <input 
+    type="password"
+    id="password"
+    placeholder="اكتب الباسوورد">
+
+    <button onclick="openSite()">
+
+        دخول 🎉
+
+    </button>
+
+    <p id="error"></p>
+
+</div>
+
+<!-- الموسيقى -->
+
+<audio id="music" loop>
+
+    <source src="music1.mp3" type="audio/mpeg">
+
 </audio>
 
-    <canvas id="confetti"></canvas>
+<!-- الكونفيتي -->
 
-    <nav>
-        <button onclick="showPage('home')">🎉 الرئيسية</button>
-        <button onclick="showPage('message')">💌 رسالة</button>
-        <button onclick="playMusic()">🎵 موسيقى</button>
-    </nav>
+<canvas id="confetti"></canvas>
 
-    <section id="home">
-        <h1>🎂 Happy Birthday 🎂</h1>
-        <h2 id="typing"></h2>
-        <div class="cake">
-            🎂
-            <div class="flame"></div>
-        </div>
-        <button class="surprise-btn" onclick="surprise()">🎁 اضغطي للمفاجأة</button>
-        <h2 id="surpriseText"></h2>
-    </section>
+<!-- الأزرار -->
 
-    <section id="message">
-        <div class="message-box">
-            <h2>💌 رسالة خاصة 💌</h2>
-            <img src="Gemini_Generated_Image_il3dreil3dreil3d.png" alt="Birthday Image">
-            <p>
-                كل سنة وانتي طيبة ياروحي و عقبال سنين كتيره و احنا مع بعض و تحققي كل الي نفسك فيه و اشوفك من اشطر الناس و كل سنة وانتي طيبه و قلبك ابيض و كله بيحبك❤️❤️❤️❤️❤️
-            </p>
-        </div>
-    </section>
+<nav>
 
-    <script>
-        /* ========================= */
-        /* فتح الموقع بالباسوورد */
-        /* ========================= */
-        function openSite() {
-            let pass = document.getElementById("password").value;
-            let correctPassword = "24/5/2008";
+    <button onclick="showPage('home')">
 
-            if (pass === correctPassword) {
-                // تشغيل الأغنية أولاً فور الضغط لتخطي حظر المتصفح
-                let music = document.getElementById("music");
-                music.play().catch(error => {
-                    console.log("المتصفح منع التشغيل التلقائي: ", error);
-                });
+        🎉 الرئيسية
 
-                document.getElementById("login").style.display = "none";
-                document.getElementById("home").style.display = "block";
+    </button>
 
-                startTyping();
-            } else {
-                document.getElementById("error").innerHTML = "❌ الباسوورد غلط";
-                document.getElementById("password").style.border = "2px solid red";
-            }
+    <button onclick="showPage('message')">
+
+        💌 رسالة
+
+    </button>
+
+    <button onclick="playMusic()">
+
+        🎵 موسيقى
+
+    </button>
+
+</nav>
+
+<!-- الصفحة الرئيسية -->
+
+<section id="home">
+
+    <h1>
+
+        🎂 Happy Birthday 🎂
+
+    </h1>
+
+    <h2 id="typing"></h2>
+
+    <div class="cake">
+
+        🎂
+
+        <div class="flame"></div>
+
+    </div>
+
+    <button class="surprise-btn"
+    onclick="surprise()">
+
+        🎁 اضغطي للمفاجأة
+
+    </button>
+
+    <h2 id="surpriseText"></h2>
+
+</section>
+
+<!-- صفحة الرسالة -->
+
+<section id="message">
+
+    <div class="message-box">
+
+        <h2>
+
+            💌 رسالة خاصة 💌
+
+        </h2>
+
+        <img src="Gemini_Generated_Image_il3dreil3dreil3d.png">
+
+        <p>
+
+كل سنة وانتي طيبة ياروحي ❤️  
+وعقبال سنين كتيره واحنا مع بعض  
+وتحققي كل اللي نفسك فيه  
+واشوفك من أنجح الناس ❤️  
+وكل سنة وانتي طيبة وقلبك أبيض  
+وكل الناس بتحبك 💖
+
+        </p>
+
+    </div>
+
+</section>
+
+<script>
+
+/* ========================= */
+/* فتح الموقع بالباسوورد */
+/* ========================= */
+
+function openSite(){
+
+    let pass = document.getElementById("password").value;
+
+    let correctPassword = "24/5/2008";
+
+    if(pass === correctPassword){
+
+        document.getElementById("login").style.display = "none";
+
+        document.getElementById("home").style.display = "block";
+
+        startTyping();
+
+        document.getElementById("music").play();
+
+    }else{
+
+        document.getElementById("error").innerHTML =
+        "❌ الباسوورد غلط";
+
+        document.getElementById("password").style.border =
+        "2px solid red";
+    }
+}
+
+/* ========================= */
+/* تغيير الصفحات */
+/* ========================= */
+
+function showPage(pageId){
+
+    document.getElementById("home").style.display = "none";
+
+    document.getElementById("message").style.display = "none";
+
+    document.getElementById(pageId).style.display = "block";
+}
+
+/* ========================= */
+/* تشغيل الموسيقى */
+/* ========================= */
+
+function playMusic(){
+
+    document.getElementById("music").play();
+}
+
+/* ========================= */
+/* المفاجأة */
+/* ========================= */
+
+function surprise(){
+
+    document.getElementById("surpriseText").innerHTML =
+
+    "💖 كل سنة وانتي أجمل حاجة في حياتي 💖";
+}
+
+/* ========================= */
+/* الكتابة المتحركة */
+/* ========================= */
+
+let text = "🎉 عيد ميلاد 18 سعيد 🎉";
+
+let i = 0;
+
+function startTyping(){
+
+    let speed = setInterval(function(){
+
+        if(i < text.length){
+
+            document.getElementById("typing").innerHTML += text.charAt(i);
+
+            i++;
+
+        }else{
+
+            clearInterval(speed);
         }
 
-        /* ========================= */
-        /* تغيير الصفحات */
-        /* ========================= */
-        function showPage(pageId) {
-            document.getElementById("home").style.display = "none";
-            document.getElementById("message").style.display = "none";
-            document.getElementById(pageId).style.display = "block";
+    },100);
+}
+
+/* ========================= */
+/* القلوب */
+/* ========================= */
+
+function createHeart(){
+
+    const heart = document.createElement("div");
+
+    heart.classList.add("heart");
+
+    heart.innerHTML = "💖";
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    let size = Math.random() * 25 + 20;
+
+    heart.style.fontSize = size + "px";
+
+    heart.style.animationDuration =
+
+    (Math.random() * 3 + 3) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+
+        heart.remove();
+
+    },6000);
+}
+
+setInterval(createHeart,250);
+
+/* ========================= */
+/* الكونفيتي */
+/* ========================= */
+
+const canvas = document.getElementById("confetti");
+
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+
+canvas.height = window.innerHeight;
+
+let pieces = [];
+
+for(let i=0;i<120;i++){
+
+    pieces.push({
+
+        x:Math.random()*canvas.width,
+
+        y:Math.random()*canvas.height,
+
+        r:Math.random()*6+2
+    });
+}
+
+function drawConfetti(){
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    ctx.fillStyle = "white";
+
+    pieces.forEach(function(p){
+
+        ctx.beginPath();
+
+        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+
+        ctx.fill();
+
+        p.y += 2;
+
+        if(p.y > canvas.height){
+
+            p.y = 0;
         }
+    });
 
-        /* ========================= */
-        /* تشغيل وإيقاف الموسيقى */
-        /* ========================= */
-        function playMusic() {
-            let music = document.getElementById("music");
-            if (music.paused) {
-                music.play();
-            } else {
-                music.pause();
-            }
-        }
+    requestAnimationFrame(drawConfetti);
+}
 
-        /* ========================= */
-        /* المفاجأة */
-        /* ========================= */
-        function surprise() {
-            document.getElementById("surpriseText").innerHTML = "💖 كل سنة وانتي أجمل حاجة في حياتي 💖";
-        }
+drawConfetti();
 
-        /* ========================= */
-        /* الكتابة المتحركة */
-        /* ========================= */
-        let text = "🎉 عيد ميلاد 18 سعيد 🎉";
-        let i = 0;
+window.addEventListener("resize",()=>{
 
-        function startTyping() {
-            let speed = setInterval(function () {
-                if (i < text.length) {
-                    document.getElementById("typing").innerHTML += text.charAt(i);
-                    i++;
-                } else {
-                    clearInterval(speed);
-                }
-            }, 100);
-        }
+    canvas.width = window.innerWidth;
 
-        /* ========================= */
-        /* القلوب */
-        /* ========================= */
-        function createHeart() {
-            const heart = document.createElement("div");
-            heart.classList.add("heart");
-            heart.innerHTML = "💖";
-            heart.style.left = Math.random() * 100 + "vw";
-            
-            let size = Math.random() * 25 + 20;
-            heart.style.fontSize = size + "px";
-            heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+    canvas.height = window.innerHeight;
+});
 
-            document.body.appendChild(heart);
+</script>
 
-            setTimeout(() => {
-                heart.remove();
-            }, 6000);
-        }
-        setInterval(createHeart, 250);
-
-        /* ========================= */
-        /* الكونفيتي */
-        /* ========================= */
-        const canvas = document.getElementById("confetti");
-        const ctx = canvas.getContext("2d");
-
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        let pieces = [];
-        for (let i = 0; i < 120; i++) {
-            pieces.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                r: Math.random() * 6 + 2
-            });
-        }
-
-        function drawConfetti() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = "white";
-
-            pieces.forEach(function (p) {
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-                ctx.fill();
-
-                p.y += 2;
-                if (p.y > canvas.height) {
-                    p.y = 0;
-                }
-            });
-
-            requestAnimationFrame(drawConfetti);
-        }
-        drawConfetti();
-
-        window.addEventListener("resize", () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-    </script>
 </body>
 </html>
