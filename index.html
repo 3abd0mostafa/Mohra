@@ -4,7 +4,6 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>🎉 Happy Birthday 🎉</title>
@@ -69,14 +68,14 @@ body{
 
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.85);
+    background:rgba(0,0,0,.90);
 
     display:flex;
     justify-content:center;
     align-items:center;
     flex-direction:column;
 
-    z-index:999;
+    z-index:9999;
     padding:20px;
 }
 
@@ -138,9 +137,6 @@ nav{
     flex-wrap:wrap;
     gap:10px;
 
-    position:sticky;
-    top:0;
-
     backdrop-filter:blur(10px);
 
     z-index:10;
@@ -169,11 +165,6 @@ section{
     min-height:100vh;
 
     padding:30px 15px;
-}
-
-#home{
-
-    display:block;
 }
 
 /* ========================= */
@@ -498,6 +489,8 @@ function openSite(){
     if(pass === correctPassword){
 
         document.getElementById("login").style.display = "none";
+
+        document.getElementById("home").style.display = "block";
 
         startTyping();
 
