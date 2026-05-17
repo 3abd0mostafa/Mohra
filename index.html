@@ -362,10 +362,11 @@ canvas{
 <!-- صفحة الدخول -->
 
 <div id="login">
+<h2>💖 ادخلي الباسوورد 💖</h2>
 
-    <h2>💖 ادخلي الاسم 💖</h2>
-
-    <input type="text" placeholder="اكتب الاسم">
+<input type="password"
+id="password"
+placeholder="اكتب الباسوورد">
 
     <button onclick="openSite()">
 
@@ -471,14 +472,23 @@ canvas{
 /* ========================= */
 /* فتح الموقع */
 /* ========================= */
-
 function openSite(){
 
-    document.getElementById("login").style.display = "none";
+    let pass = document.getElementById("password").value;
 
-    startTyping();
+    let correctPassword = "Happy18";
+
+    if(pass === correctPassword){
+
+        document.getElementById("login").style.display = "none";
+
+        startTyping();
+
+    }else{
+
+        alert("❌ الباسوورد غلط");
+    }
 }
-
 /* ========================= */
 /* تغيير الصفحات */
 /* ========================= */
